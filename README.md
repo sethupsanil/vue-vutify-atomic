@@ -1,4 +1,4 @@
-# netflix
+# Vue3 Vutify Atomic structure
 
 This template should help get you started developing with Vue 3 in Vite.
 
