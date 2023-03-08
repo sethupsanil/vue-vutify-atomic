@@ -10,7 +10,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@enum': fileURLToPath(new URL('./src/enums/', import.meta.url)),
+      '@enum': fileURLToPath(new URL('./src/enums', import.meta.url)),
+      '@component': fileURLToPath(new URL('./src/components', import.meta.url)),
+      '@atom': fileURLToPath(new URL('./src/components/atoms', import.meta.url)),
     }
   }
 })

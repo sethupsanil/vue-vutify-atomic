@@ -4,7 +4,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@enum/*":["./src/enums/*"],
+      "@component/*":["./src/components/*"],
+      "@atom/*":["./src/components/atoms/*"],
     },
     "preserveValueImports": false
   },
