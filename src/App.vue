@@ -1,43 +1,34 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import ButtonAtom from './components/atoms/ButtonAtom.vue';
-import InputAtom from './components/atoms/InputAtom.vue';
-import TextArea from  './components/atoms/TextArea.vue';
+// import { VCheckbox } from 'vuetify/lib/components';
 
-import { BUTTON_ROUNDED, BUTTON_VARIANTS } from '@/enums/ButtonEnums'
-const buttonClickHandler = (event: MouseEvent) => {
+const clickHandler = (event: MouseEvent) => {
   console.log(event)
 }
 
 const username = ref<string>('')
 const password = ref<string>('')
-  
+// VCheckbox
 </script>
 
 <template>
- 
-  <ButtonAtom  :variant="BUTTON_VARIANTS.elevated">{{ BUTTON_VARIANTS.elevated }}</ButtonAtom>
-  <ButtonAtom :variant="BUTTON_VARIANTS.flat">{{ BUTTON_VARIANTS.flat }}</ButtonAtom>
-  <ButtonAtom :variant="BUTTON_VARIANTS.outlined">{{ BUTTON_VARIANTS.outlined }}</ButtonAtom>
-  <ButtonAtom  :variant="BUTTON_VARIANTS.text">{{ BUTTON_VARIANTS.text }}</ButtonAtom>
-  <ButtonAtom
-    :rounded="BUTTON_ROUNDED.pill"
-    @click="buttonClickHandler"
-    :color="'#f00'"
-    :block="true"
-    >{{ BUTTON_ROUNDED.pill }}</ButtonAtom
-  >
-  <Button>new</Button>
-  <InputAtom  id="username" class="red"  label="Username" v-model="username" @change="$event=>buttonClickHandler" />
-  {{ username }}
-  <InputAtom
-    id="password"
-    label="Password"
-    type="password"
-    v-model="password"
-  ></InputAtom>
+  <v-card>
+    <v-container >
+      <v-row>
+        <v-col cols="12">
+         
+          
 
-  <TextArea ></TextArea>
+          
+        </v-col>
+        
+
+      </v-row>
+    
+    </v-container>
+  </v-card>
+
+
   <RouterView />
 </template>
 
