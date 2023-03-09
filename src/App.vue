@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-// import { VCheckbox } from 'vuetify/lib/components';
+import CheckboxAtom from './components/atoms/CheckboxAtom.vue'
 
 const clickHandler = (event: MouseEvent) => {
   console.log(event)
@@ -16,9 +16,7 @@ const password = ref<string>('')
     <v-container >
       <v-row>
         <v-col cols="12">
-         
-          
-
+          <CheckboxAtom></CheckboxAtom>
           
         </v-col>
         
