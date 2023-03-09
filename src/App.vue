@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import ButtonAtom from './components/atoms/ButtonAtom.vue';
 import InputAtom from './components/atoms/InputAtom.vue';
+import TextArea from  './components/atoms/TextArea.vue';
 
 import { BUTTON_ROUNDED, BUTTON_VARIANTS } from '@/enums/ButtonEnums'
 const buttonClickHandler = (event: MouseEvent) => {
@@ -10,7 +11,7 @@ const buttonClickHandler = (event: MouseEvent) => {
 
 const username = ref<string>('')
 const password = ref<string>('')
-
+  
 </script>
 
 <template>
@@ -35,6 +36,8 @@ const password = ref<string>('')
     type="password"
     v-model="password"
   ></InputAtom>
+
+  <TextArea ></TextArea>
   <RouterView />
 </template>
 

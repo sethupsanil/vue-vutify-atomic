@@ -1,5 +1,5 @@
 <template>
-  <v-text-field
+  <v-textarea
     :rules="rules"
     v-bind="$attrs"
     :label="label"
@@ -15,11 +15,13 @@
     :suffix="suffix"
     :value="modelValue"
     v-model="value"
-  ></v-text-field>
+    :direction="direction"
+  ></v-textarea>
 </template>
 
 <script setup lang="ts">
 import { InputDensity, InputVariant, INPUT_DENSITY, INPUT_VARIANTS } from '@/enums/InputEnum'
+import { InputDirection, INPUT_DIRECTION } from '@/enums/TextAreaEnum'
 import { defineProps, computed, ref, watch, PropType } from 'vue'
 const value = ref('')
 const props = defineProps({
@@ -28,6 +30,11 @@ const props = defineProps({
     type: String as PropType<InputVariant>,
     required: false,
     validator: (value: string) => Object.prototype.hasOwnProperty.call(INPUT_VARIANTS, value)
+  },
+  direction: {
+    type: String as PropType<InputDirection>,
+    required: false,
+    validator: (value: string) => Object.prototype.hasOwnProperty.call(INPUT_DIRECTION, value)
   },
   hint: String,
   type: String,
