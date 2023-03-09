@@ -7,6 +7,7 @@
     :block="block"
     :icon="icon"
     :size="size"
+    v-bind="$attrs"
     @click="$emit('click')"
   >
     <slot></slot>
@@ -46,4 +47,6 @@ const props = defineProps({
   block: Boolean,
   icon: String
 })
+
 </script>
+

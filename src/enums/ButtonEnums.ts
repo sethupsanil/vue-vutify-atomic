@@ -26,3 +26,5 @@ export const BUTTON_SIZES = {
 } as const
 
 export type ButtonSize = keyof typeof BUTTON_SIZES;
+
+export {};
