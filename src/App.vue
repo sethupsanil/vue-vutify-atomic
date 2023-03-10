@@ -17,7 +17,7 @@ const password = ref<string>('')
       <v-row>
         <v-col cols="12">
           <CheckboxAtom></CheckboxAtom>
-          
+          sfg
         </v-col>
         
 
